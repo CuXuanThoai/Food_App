@@ -1,4 +1,4 @@
-package com.example.foody.model
+package com.example.foody.viewmodel
 
 import android.app.Application
 import androidx.hilt.lifecycle.ViewModelInject
@@ -51,7 +51,7 @@ private val dataStoreRepository: DataStoreRepository) :AndroidViewModel(applicat
         return queries
     }
 
-    fun applySearchWuery(searchQuey :String) :HashMap<String,String>{
+    fun applySearchQuery(searchQuey :String) :HashMap<String,String>{
         val queries : HashMap<String,String> = HashMap()
         queries[QUERY_SEARCH] = searchQuey
         queries[QUERY_NUMBER] = DEFAULT_RECIPES_NUMBER
